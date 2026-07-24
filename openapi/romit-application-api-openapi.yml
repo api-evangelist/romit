@@ -1,0 +1,75 @@
+openapi: 3.0.3
+info:
+  title: Romit Application API
+  version: v1
+  description: 'Romit was a bank-agnostic wallet and payment-gateway platform for the card-not-present merchant-acquiring industry (chargeback and fraud mitigation, stored payment methods, transfers, subscriptions, invoicing and KYC/identity). The Romit v1 REST API exposed OAuth2-protected resources for Banking (cards + linked bank accounts), Identity (KYC info, documents, social, business), Transfer (auth/capture/refund/void money movement), User, Subscription, Plan and Invoice. NOTE: Romit (romit.io) ceased operations; the production and sandbox hosts are no longer reachable. This specification is a faithful DERIVATION of the surviving unofficial client library (github.com/balmasi/romit-node, 2016) — endpoint paths, HTTP methods, request fields, OAuth2 scopes and error codes are taken verbatim from that source; response schemas were not published and are intentionally left generic.'
+  x-apievangelist-method: derived
+  x-apievangelist-source: https://github.com/balmasi/romit-node/blob/master/src/index.js
+  x-status: defunct
+servers:
+- url: https://api.romit.io/v1
+  description: Production (offline — company defunct)
+- url: https://api.sandbox.romit.io/v1
+  description: Sandbox (offline — company defunct)
+security:
+- oauth2: []
+tags:
+- name: Application
+paths:
+  /:
+    get:
+      operationId: getApplication
+      summary: Get application
+      tags:
+      - Application
+      responses:
+        '200':
+          description: OK
+        default:
+          $ref: '#/components/responses/Error'
+components:
+  responses:
+    Error:
+      description: Error response. Romit returns one of a fixed set of error codes.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+                enum:
+                - err.rate_limit_exceeded
+                - err.access_denied
+                - err.invalid_arguments
+                - err.unexpected_error
+                - err.fatal_error
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      description: Romit used OAuth2. User-context flows (authorization_code / refresh_token) authorize a customer against requested scopes; the client_credentials flow issues an application access token. Access tokens are presented as an HTTP Bearer token.
+      flows:
+        authorizationCode:
+          authorizationUrl: https://api.romit.io/v1/oauth
+          tokenUrl: https://api.romit.io/v1/oauth/token
+          refreshUrl: https://api.romit.io/v1/oauth/token
+          scopes:
+            DEFAULT: Access to basic information
+            BANKING_READ: Read access to Banking
+            BANKING_WRITE: Write access to Banking
+            IDENTITY_READ: Read access to Identity
+            IDENTITY_WRITE: Write access to Identity
+            TRANSFER_READ: Read access to Transfer
+            TRANSFER_WRITE: Write access to Transfer
+            USER_READ: Read access to User
+            USER_WRITE: Write access to User
+            SUBSCRIPTION_READ: Read access to Subscription
+            SUBSCRIPTION_WRITE: Write access to Subscription
+            PLAN_READ: Read access to Plan
+            PLAN_WRITE: Write access to Plan
+            INVOICE_READ: Read access to Invoice
+            INVOICE_WRITE: Write access to Invoice
+        clientCredentials:
+          tokenUrl: https://api.romit.io/v1/oauth/token
+          scopes:
+            DEFAULT: Access to basic information
