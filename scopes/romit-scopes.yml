@@ -1,0 +1,107 @@
+generated: '2026-07-21'
+method: derived
+source: openapi/romit-openapi.yml
+schemes:
+- name: oauth2
+  source: openapi/romit-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://api.romit.io/v1/oauth
+    tokenUrl: https://api.romit.io/v1/oauth/token
+  - flow: clientCredentials
+    tokenUrl: https://api.romit.io/v1/oauth/token
+  description: Romit used OAuth2. User-context flows (authorization_code / refresh_token) authorize
+    a customer against requested scopes; the client_credentials flow issues an application access
+    token. Access tokens are presented as an HTTP Bearer token.
+scopes:
+- scope: BANKING_READ
+  description: Read access to Banking
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/romit-openapi.yml
+- scope: BANKING_WRITE
+  description: Write access to Banking
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/romit-openapi.yml
+- scope: DEFAULT
+  description: Access to basic information
+  flows:
+  - authorizationCode
+  - clientCredentials
+  sources:
+  - openapi/romit-openapi.yml
+- scope: IDENTITY_READ
+  description: Read access to Identity
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/romit-openapi.yml
+- scope: IDENTITY_WRITE
+  description: Write access to Identity
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/romit-openapi.yml
+- scope: INVOICE_READ
+  description: Read access to Invoice
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/romit-openapi.yml
+- scope: INVOICE_WRITE
+  description: Write access to Invoice
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/romit-openapi.yml
+- scope: PLAN_READ
+  description: Read access to Plan
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/romit-openapi.yml
+- scope: PLAN_WRITE
+  description: Write access to Plan
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/romit-openapi.yml
+- scope: SUBSCRIPTION_READ
+  description: Read access to Subscription
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/romit-openapi.yml
+- scope: SUBSCRIPTION_WRITE
+  description: Write access to Subscription
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/romit-openapi.yml
+- scope: TRANSFER_READ
+  description: Read access to Transfer
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/romit-openapi.yml
+- scope: TRANSFER_WRITE
+  description: Write access to Transfer
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/romit-openapi.yml
+- scope: USER_READ
+  description: Read access to User
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/romit-openapi.yml
+- scope: USER_WRITE
+  description: Write access to User
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/romit-openapi.yml

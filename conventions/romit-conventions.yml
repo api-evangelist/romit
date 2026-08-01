@@ -1,0 +1,27 @@
+generated: '2026-07-21'
+method: derived
+source: https://github.com/balmasi/romit-node/blob/master/src/index.js
+note: >-
+  Cross-cutting semantics for the Romit v1 API, derived from the surviving
+  unofficial client library. Romit (romit.io) is defunct. No idempotency-key
+  contract was documented, so no Idempotency pointer is emitted.
+authentication:
+  style: oauth2-bearer
+  scheme: Bearer
+  detail: OAuth2 access token presented as an HTTP Bearer token; see authentication/romit-authentication.yml.
+pagination:
+  style: limit-offset
+  params: [limit, offset]
+  applies_to: [listBanking, listIdentities, listTransfers, listSubscription, listPlan, listInvoice]
+rate_limiting:
+  documented: true
+  rule: Money movement transactions are rate limited to 1 request every 5 seconds.
+  error_code: err.rate_limit_exceeded
+  applies_to: [createTransfer, captureTransfer, refundTransfer, voidTransfer]
+error_envelope:
+  field: error
+  format: custom
+  reference: errors/romit-problem-types.yml
+idempotency:
+  documented: false
+content_type: application/json

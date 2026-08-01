@@ -1,0 +1,17 @@
+generated: '2026-07-21'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+note: >-
+  Romit (romit.io) is defunct; the API hosts no longer serve HTTPS. Absence of
+  records below is valid probed data for the dead domain.
+hosts:
+- host: api.romit.io
+  https: false
+- host: api.sandbox.romit.io
+  https: false
+domains:
+- domain: romit.io
+  dnssec: false
+  caa: []
+  spf: false
+  dmarc: false

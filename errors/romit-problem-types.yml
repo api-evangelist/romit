@@ -1,0 +1,33 @@
+generated: '2026-07-21'
+method: derived
+source: https://github.com/balmasi/romit-node/blob/master/src/index.js
+format: custom
+envelope:
+  field: error
+  description: >-
+    Romit returned errors as a JSON object with a single string `error` field
+    carrying one of a fixed set of dotted error codes. Not RFC 9457
+    problem+json. Codes below are taken verbatim from the surviving unofficial
+    client library; Romit (romit.io) is defunct and published no live error
+    reference.
+problems:
+  - code: err.rate_limit_exceeded
+    title: Rate limit exceeded
+    detail: Money movement transactions are rate limited to 1 request every 5 seconds.
+    status: 429
+  - code: err.access_denied
+    title: Access denied
+    detail: The client or user does not have access to the requested resource.
+    status: 403
+  - code: err.invalid_arguments
+    title: Invalid arguments
+    detail: The request object is invalid.
+    status: 400
+  - code: err.unexpected_error
+    title: Unexpected error
+    detail: An unexpected internal error occurred.
+    status: 500
+  - code: err.fatal_error
+    title: Fatal error
+    detail: An internal fatal error occurred.
+    status: 500

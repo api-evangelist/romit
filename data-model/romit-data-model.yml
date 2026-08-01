@@ -1,0 +1,63 @@
+generated: '2026-07-21'
+method: derived
+source: openapi/romit-openapi.yml
+note: >-
+  Entity-relationship graph derived from the Romit v1 operation surface and
+  documented request fields (via the surviving unofficial client library).
+  Romit (romit.io) is defunct; no object reference was published, so id-prefixes
+  are unknown.
+entities:
+  - name: card
+    domain: Banking
+    operations: [createBankingCard, getBankingCard, updateBankingCard, disableBankingCard]
+  - name: account
+    domain: Banking
+    operations: [getBankingAccount, updateBankingAccount, linkBankingAccounts, linkMfaBankingAccounts, disableBankingAccount]
+  - name: identity_info
+    domain: Identity
+    operations: [getIdentityInfo, createIdentityInfo, listIdentities]
+  - name: identity_document
+    domain: Identity
+    operations: [getIdentityDocument, createIdentityDocument]
+  - name: identity_social
+    domain: Identity
+    operations: [getIdentitySocialNetwork, createIdentitySocialNetwork]
+  - name: identity_business
+    domain: Identity
+    operations: [getIdentityBusiness, createIdentityBusiness]
+  - name: transfer
+    domain: Transfer
+    operations: [listTransfers, getTransfer, createTransfer, captureTransfer, refundTransfer, voidTransfer]
+  - name: user
+    domain: User
+    operations: [getUser, getPublicUser]
+  - name: subscription
+    domain: Subscription
+    operations: [listSubscription, getSubscription, createSubscription, updateSubscription, cancelSubscription]
+  - name: plan
+    domain: Plan
+    operations: [listPlan, getPlan, createPlan, updatePlan, disablePlan]
+  - name: invoice
+    domain: Invoice
+    operations: [listInvoice, getInvoice, createInvoice, updateInvoice, cancelInvoice]
+relationships:
+  - from: transfer
+    to: user
+    type: belongs_to
+    via: userId
+  - from: transfer
+    to: card
+    type: belongs_to
+    via: bankingId
+  - from: transfer
+    to: invoice
+    type: belongs_to
+    via: invoiceId
+  - from: subscription
+    to: card
+    type: belongs_to
+    via: bankingId
+  - from: subscription
+    to: plan
+    type: belongs_to
+    via: planId

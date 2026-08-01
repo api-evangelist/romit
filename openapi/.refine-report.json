@@ -1,0 +1,30 @@
+{
+  "provider": "romit",
+  "sources": [
+    "romit-application-api-openapi.yml",
+    "romit-banking-api-openapi.yml",
+    "romit-identity-api-openapi.yml",
+    "romit-invoice-api-openapi.yml",
+    "romit-oauth-api-openapi.yml",
+    "romit-plan-api-openapi.yml",
+    "romit-subscription-api-openapi.yml",
+    "romit-transfer-api-openapi.yml",
+    "romit-user-api-openapi.yml"
+  ],
+  "outputs": [
+    "romit-application-api-openapi.yml",
+    "romit-banking-api-openapi.yml",
+    "romit-identity-api-openapi.yml",
+    "romit-invoice-api-openapi.yml",
+    "romit-oauth-api-openapi.yml",
+    "romit-plan-api-openapi.yml",
+    "romit-subscription-api-openapi.yml",
+    "romit-transfer-api-openapi.yml",
+    "romit-user-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

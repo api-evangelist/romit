@@ -1,0 +1,18 @@
+generated: '2026-07-21'
+method: derived
+source: https://github.com/balmasi/romit-node/blob/master/src/index.js
+note: >-
+  Romit exposed a dedicated sandbox environment selected by a client-side
+  `sandbox` flag. No published test cards, test bank accounts, or magic test
+  values survive (Romit is defunct); only the environment separation is
+  evidenced.
+environments:
+  - mode: production
+    base_url: https://api.romit.io/v1
+  - mode: sandbox
+    base_url: https://api.sandbox.romit.io/v1
+test_live_separation:
+  mechanism: separate base host (api.sandbox.romit.io vs api.romit.io)
+  selector: client `sandbox` boolean
+test_values:
+  documented: false
