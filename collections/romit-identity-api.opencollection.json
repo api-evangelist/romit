@@ -1,0 +1,186 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Romit Application Identity API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "client_credentials",
+      "accessTokenUrl": "https://api.romit.io/v1/oauth/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Identity",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List identities",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.romit.io/v1/identity",
+            "params": [
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Page size for list endpoints."
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "Result offset for list endpoints."
+              }
+            ]
+          },
+          "docs": "List identities"
+        },
+        {
+          "info": {
+            "name": "Get identity info",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.romit.io/v1/identity/info/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get identity info"
+        },
+        {
+          "info": {
+            "name": "Create identity info",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.romit.io/v1/identity/info",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create identity info"
+        },
+        {
+          "info": {
+            "name": "Get identity document",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.romit.io/v1/identity/document/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get identity document"
+        },
+        {
+          "info": {
+            "name": "Upload identity document",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.romit.io/v1/identity/document",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Upload identity document"
+        },
+        {
+          "info": {
+            "name": "Get identity social network",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.romit.io/v1/identity/social/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get identity social network"
+        },
+        {
+          "info": {
+            "name": "Link identity social network",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.romit.io/v1/identity/social",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Link identity social network"
+        },
+        {
+          "info": {
+            "name": "Get identity business",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.romit.io/v1/identity/business/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get identity business"
+        },
+        {
+          "info": {
+            "name": "Create identity business",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.romit.io/v1/identity/business",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create identity business"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

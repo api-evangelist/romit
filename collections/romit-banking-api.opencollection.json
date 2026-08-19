@@ -1,0 +1,215 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Romit Application Banking API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "client_credentials",
+      "accessTokenUrl": "https://api.romit.io/v1/oauth/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Banking",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List banking instruments",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.romit.io/v1/banking",
+            "params": [
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Page size for list endpoints."
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "Result offset for list endpoints."
+              }
+            ]
+          },
+          "docs": "List banking instruments"
+        },
+        {
+          "info": {
+            "name": "Add a card",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.romit.io/v1/banking/card",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Add a card"
+        },
+        {
+          "info": {
+            "name": "Get a card",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.romit.io/v1/banking/card/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a card"
+        },
+        {
+          "info": {
+            "name": "Update a card",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.romit.io/v1/banking/card/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a card"
+        },
+        {
+          "info": {
+            "name": "Disable a card",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.romit.io/v1/banking/card/:id/disable",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Disable a card"
+        },
+        {
+          "info": {
+            "name": "Get a linked bank account",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.romit.io/v1/banking/account/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a linked bank account"
+        },
+        {
+          "info": {
+            "name": "Update a linked bank account",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.romit.io/v1/banking/account/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a linked bank account"
+        },
+        {
+          "info": {
+            "name": "Link bank accounts",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.romit.io/v1/banking/account/link",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Link bank accounts"
+        },
+        {
+          "info": {
+            "name": "Complete a multi-factor bank-link step",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.romit.io/v1/banking/account/link/step",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Complete a multi-factor bank-link step"
+        },
+        {
+          "info": {
+            "name": "Disable a linked bank account",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.romit.io/v1/banking/account/:id/disable",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Disable a linked bank account"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
