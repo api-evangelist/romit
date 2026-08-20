@@ -46,6 +46,17 @@ tags:
 - Chargebacks
 - Fraud Prevention
 - Invoicing
+- Subscription
+tags_raw:
+- Company
+- Payments
+- Fintech
+- Digital Wallet
+- Payment Gateway
+- Merchant Services
+- Chargebacks
+- Fraud Prevention
+- Invoicing
 - Subscriptions
 apis:
 - aid: romit:romit-application-api
@@ -94,6 +105,8 @@ apis:
   humanURL: https://romit.io
   baseURL: https://api.romit.io/v1
   tags:
+  - Authentication
+  tags_raw:
   - OAuth
   properties:
   - type: OpenAPI
