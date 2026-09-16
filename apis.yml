@@ -42,7 +42,7 @@ x-tier-reason: portfolio-lead
 x-status: defunct
 specificationVersion: '0.23'
 created: '2026-07-17'
-modified: '2026-09-15'
+modified: '2026-09-16'
 tags:
 - Company
 - Payments
@@ -54,6 +54,7 @@ tags:
 - Fraud Prevention
 - Invoicing
 - Subscription
+- Defunct
 tags_raw:
 - Company
 - Payments
@@ -65,6 +66,7 @@ tags_raw:
 - Fraud Prevention
 - Invoicing
 - Subscriptions
+- Defunct
 apis:
 - aid: romit:romit-application-api
   name: Romit Application API
