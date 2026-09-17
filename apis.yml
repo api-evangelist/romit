@@ -108,18 +108,6 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/romit-invoice-api-openapi.yml
-- aid: romit:romit-oauth-api
-  name: Romit OAuth API
-  description: The OAuth API from Romit — 2 operation(s) for oauth.
-  humanURL: https://romit.io
-  baseURL: https://api.romit.io/v1
-  tags:
-  - Authentication
-  tags_raw:
-  - OAuth
-  properties:
-  - type: OpenAPI
-    url: openapi/romit-oauth-api-openapi.yml
 - aid: romit:romit-plan-api
   name: Romit Plan API
   description: The Plan API from Romit — 3 operation(s) for plan.
@@ -160,6 +148,16 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/romit-user-api-openapi.yml
+- aid: romit:romit-oauth-api
+  name: Romit O Auth API
+  description: The OAuth API from Romit — 2 operation(s) for oauth.
+  humanURL: https://romit.io
+  baseURL: https://api.romit.io/v1
+  tags:
+  - OAuth
+  properties:
+  - type: OpenAPI
+    url: openapi/romit-oauth-api-openapi.yml
 common:
 - type: Website
   url: https://romit.io
