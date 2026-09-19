@@ -104,6 +104,8 @@ apis:
   humanURL: https://romit.io
   baseURL: https://api.romit.io/v1
   tags:
+  - Invoices
+  tags_raw:
   - Invoice
   properties:
   - type: OpenAPI
@@ -154,6 +156,8 @@ apis:
   humanURL: https://romit.io
   baseURL: https://api.romit.io/v1
   tags:
+  - Authentication
+  tags_raw:
   - OAuth
   properties:
   - type: OpenAPI
