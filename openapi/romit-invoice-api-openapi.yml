@@ -1,8 +1,8 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Romit Application Invoice API
+  title: Romit Invoice API
   version: v1
-  description: 'Romit was a bank-agnostic wallet and payment-gateway platform for the card-not-present merchant-acquiring industry (chargeback and fraud mitigation, stored payment methods, transfers, subscriptions, invoicing and KYC/identity). The Romit v1 REST API exposed OAuth2-protected resources for Banking (cards + linked bank accounts), Identity (KYC info, documents, social, business), Transfer (auth/capture/refund/void money movement), User, Subscription, Plan and Invoice. NOTE: Romit (romit.io) ceased operations; the production and sandbox hosts are no longer reachable. This specification is a faithful DERIVATION of the surviving unofficial client library (github.com/balmasi/romit-node, 2016) — endpoint paths, HTTP methods, request fields, OAuth2 scopes and error codes are taken verbatim from that source; response schemas were not published and are intentionally left generic.'
+  description: Romit was a bank-agnostic wallet and payment-gateway platform for the card-not-present merchant-acquiring industry (chargeback and fraud mitigation, stored payment methods, transfers, subscriptions, invoicing and KYC/identity).
   x-apievangelist-method: derived
   x-apievangelist-source: https://github.com/balmasi/romit-node/blob/master/src/index.js
   x-status: defunct
@@ -117,6 +117,19 @@ paths:
         default:
           $ref: '#/components/responses/Error'
 components:
+  parameters:
+    offset:
+      name: offset
+      in: query
+      schema:
+        type: integer
+      description: Result offset for list endpoints.
+    limit:
+      name: limit
+      in: query
+      schema:
+        type: integer
+      description: Page size for list endpoints.
   responses:
     Error:
       description: Error response. Romit returns one of a fixed set of error codes.
@@ -133,19 +146,6 @@ components:
                 - err.invalid_arguments
                 - err.unexpected_error
                 - err.fatal_error
-  parameters:
-    offset:
-      name: offset
-      in: query
-      schema:
-        type: integer
-      description: Result offset for list endpoints.
-    limit:
-      name: limit
-      in: query
-      schema:
-        type: integer
-      description: Page size for list endpoints.
   securitySchemes:
     oauth2:
       type: oauth2
