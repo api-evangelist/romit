@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Romit O Auth API
+  title: Romit OAuth API
   version: v1
   description: Romit was a bank-agnostic wallet and payment-gateway platform for the card-not-present merchant-acquiring industry (chargeback and fraud mitigation, stored payment methods, transfers, subscriptions, invoicing and KYC/identity).
   x-apievangelist-method: derived

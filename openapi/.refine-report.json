@@ -14,23 +14,20 @@
     "romit-transfer-api-openapi.yml",
     "romit-user-api-openapi.yml"
   ],
-  "archived": [
-    "deleted 1 superseded output(s) from the previous generation"
-  ],
+  "archived": [],
   "errors": [],
   "warnings": [],
   "notes": [
     "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
     "romit-openapi.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
-    "superseded outputs removed: romit-o-auth-api-openapi.yml",
-    "apis.yml register: written (+1 apis, 9 total)"
+    "apis.yml register: already-registered"
   ],
   "skipped": [
     "romit-application-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "romit-banking-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "romit-identity-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "romit-invoice-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "romit-o-auth-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "romit-oauth-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "romit-plan-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "romit-subscription-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "romit-transfer-api-openapi.yml: previously refined output, superseded by openapi/_original/",
