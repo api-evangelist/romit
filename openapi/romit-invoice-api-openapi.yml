@@ -118,18 +118,18 @@ paths:
           $ref: '#/components/responses/Error'
 components:
   parameters:
-    offset:
-      name: offset
-      in: query
-      schema:
-        type: integer
-      description: Result offset for list endpoints.
     limit:
       name: limit
       in: query
       schema:
         type: integer
       description: Page size for list endpoints.
+    offset:
+      name: offset
+      in: query
+      schema:
+        type: integer
+      description: Result offset for list endpoints.
   responses:
     Error:
       description: Error response. Romit returns one of a fixed set of error codes.
