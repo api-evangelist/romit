@@ -64,6 +64,77 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Romit is a company surfaced as a portfolio company of 500-global and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+> **No longer operating.** This company or product has shut down, been discontinued, or been deprecated. This profile is kept as a historical record and is not maintained or rated.
 
-Backed by: 500-global — https://enter.health
+Romit was a bank-agnostic digital wallet and payment-gateway platform for the card-not-present merchant-acquiring industry, built by a team of ex-Robocoin (bitcoin ATM) founders and backed by the 500 Global (500 Startups) accelerator. The Romit Merchant Suite let merchants stop chargebacks, reduce fraud and resolve disputes, while its consumer wallet let customers securely store payment methods, view transactions and communicate with merchants. Its OAuth2 REST API (api.romit.io/v1) exposed Banking (cards + linked bank accounts), Identity/KYC, Transfer (authorize/capture/refund/void money movement), Subscription, Plan and Invoice resources. Romit (romit.io) has since ceased operations; this profile captures the API surface derived from the surviving public evidence.
+
+**Areas:** Company · Payments · Fintech · Digital Wallet · Payment Gateway · Merchant Services · Chargebacks · Fraud Prevention · Invoicing · Subscription · Defunct
+
+## Romit on APIs.io (historical record)
+
+Everything profiled for Romit is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/romit/](https://apis.io/providers/romit/)** — or go straight to one of the APIs or properties below.
+
+### APIs (9)
+
+- [Romit Application API](https://apis.io/apis/romit/romit-application-api/) — The Application API from Romit — 1 operation(s) for application.
+- [Romit Banking API](https://apis.io/apis/romit/romit-banking-api/) — The Banking API from Romit — 8 operation(s) for banking.
+- [Romit Identity API](https://apis.io/apis/romit/romit-identity-api/) — The Identity API from Romit — 9 operation(s) for identity.
+- [Romit Invoice API](https://apis.io/apis/romit/romit-invoice-api/) — The Invoice API from Romit — 3 operation(s) for invoice.
+- [Romit Plan API](https://apis.io/apis/romit/romit-plan-api/) — The Plan API from Romit — 3 operation(s) for plan.
+- [Romit Subscription API](https://apis.io/apis/romit/romit-subscription-api/) — The Subscription API from Romit — 3 operation(s) for subscription.
+- [Romit Transfer API](https://apis.io/apis/romit/romit-transfer-api/) — The Transfer API from Romit — 5 operation(s) for transfer.
+- [Romit User API](https://apis.io/apis/romit/romit-user-api/) — The User API from Romit — 2 operation(s) for user.
+- [Romit O Auth API](https://apis.io/apis/romit/romit-oauth-api/) — The OAuth API from Romit — 2 operation(s) for oauth.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Collections (9)
+
+Postman and Open Collection request collections.
+
+- [Romit Application API](https://apis.io/collections/romit/open-romit-application-api/)
+- [Romit Application Banking API](https://apis.io/collections/romit/open-romit-banking-api/)
+- [Romit Application Identity API](https://apis.io/collections/romit/open-romit-identity-api/)
+- [Romit Application Invoice API](https://apis.io/collections/romit/open-romit-invoice-api/)
+- [Romit Application OAuth API](https://apis.io/collections/romit/open-romit-oauth-api/)
+- [Romit Application Plan API](https://apis.io/collections/romit/open-romit-plan-api/)
+- [Romit Application Subscription API](https://apis.io/collections/romit/open-romit-subscription-api/)
+- [Romit Application Transfer API](https://apis.io/collections/romit/open-romit-transfer-api/)
+- [Romit Application User API](https://apis.io/collections/romit/open-romit-user-api/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Romit Authentication](https://apis.io/security/romit/romit-authentication/)
+- [Romit Domain Security](https://apis.io/security/romit/romit-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Romit Scopes](https://apis.io/scopes/romit/romit-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://romit.io)
+
+## API Evangelist rating
+
+**Not rated** — this company is recorded as no longer operating, so no score is published. If it is in fact operating, say so on this repository and it will be re-profiled.
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Romit: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/romit/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
